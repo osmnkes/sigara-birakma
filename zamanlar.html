@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Günlük Kullanım Zamanları - Adım Adım Bırak</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Adım Adım Bırak 🚭</h1>
+    <nav class="main-nav">
+      <a href="index.html">Ana Sayfa</a>
+      <a href="gunler.html">Günler</a>
+      <a href="zamanlar.html" class="active">Günlük Kullanım Zamanları</a>
+      <a href="rapor.html">Rapor</a>
+      <a href="saglik.html">Sağlık Bilgisi</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="times-section" class="card">
+      <h2>Bugünkü Kullanım Zamanların</h2>
+
+      <p id="no-plan-times" class="hidden">Henüz bir planın yok. <a href="index.html">Ana sayfadan</a> planını oluşturunca burada bugünkü saatlerini görebilirsin.</p>
+      <p id="no-times-today" class="hidden">Bugün için henüz kayıt yok.</p>
+
+      <ol id="time-list" class="time-list"></ol>
+    </section>
+  </main>
+
+  <script src="plan.js"></script>
+  <script src="zamanlar.js"></script>
+</body>
+</html>
