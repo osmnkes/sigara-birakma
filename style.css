@@ -438,3 +438,14 @@ th, td {
   background: #fdeaea;
   color: #c62828;
 }
+
+.time-list {
+  margin-top: 1rem;
+  padding-left: 1.4rem;
+}
+
+.time-list li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #eee;
+  color: #333;
+}
