@@ -1,0 +1,386 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #f4f6f8;
+  color: #1a1a1a;
+  margin: 0;
+  padding: 0 1rem 3rem;
+}
+
+header {
+  text-align: center;
+  padding: 2.5rem 1rem 1.5rem;
+}
+
+header h1 {
+  margin: 0 0 0.3rem;
+}
+
+.subtitle {
+  color: #555;
+  margin: 0;
+}
+
+.main-nav {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.main-nav a {
+  color: #555;
+  text-decoration: none;
+  font-weight: 500;
+  padding-bottom: 0.2rem;
+}
+
+.main-nav a.active {
+  color: #2e7d32;
+  border-bottom: 2px solid #2e7d32;
+}
+
+main {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.hidden {
+  display: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+label {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+input {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+button {
+  margin-top: 0.5rem;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 8px;
+  background: #2e7d32;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #276029;
+}
+
+button.secondary {
+  background: transparent;
+  color: #999;
+  margin-top: 1.5rem;
+}
+
+button.secondary:hover {
+  background: #f0f0f0;
+}
+
+.target-box {
+  text-align: center;
+  background: #eaf5ea;
+  border-radius: 10px;
+  padding: 1.2rem;
+  margin-top: 1rem;
+}
+
+.target-label {
+  display: block;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.target-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+.target-unit {
+  color: #444;
+}
+
+.counter-box {
+  text-align: center;
+  background: #fdf1f1;
+  border-radius: 10px;
+  padding: 1.2rem;
+  margin-top: 0.8rem;
+}
+
+.counter-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #c62828;
+}
+
+.tap-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.tap-buttons button {
+  flex: 1;
+}
+
+#add-cigarette {
+  background: #c62828;
+  font-size: 1.1rem;
+  padding: 1rem;
+}
+
+#add-cigarette:hover {
+  background: #a01f1f;
+}
+
+.undo {
+  background: #2e7d32;
+}
+
+.undo:hover {
+  background: #276029;
+}
+
+.times-list {
+  text-align: center;
+  color: #777;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+#feedback-message {
+  text-align: center;
+  min-height: 1.2rem;
+  font-weight: 500;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem 0;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+}
+
+th, td {
+  text-align: center;
+  padding: 0.4rem;
+  border-bottom: 1px solid #eee;
+  font-size: 0.9rem;
+}
+
+.suggestion-text {
+  text-align: center;
+  color: #444;
+  margin-top: 0.5rem;
+}
+
+.price-setting {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.price-setting label {
+  white-space: nowrap;
+}
+
+.price-setting input {
+  flex: 1;
+  padding: 0.4rem;
+}
+
+.price-setting button {
+  margin-top: 0;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  width: auto;
+}
+
+.reports p {
+  margin: 0.4rem 0;
+}
+
+.reports {
+  background: #f4f6f8;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  line-height: 1.6;
+}
+
+#health-info {
+  margin-top: 1.5rem;
+}
+
+.info-list {
+  padding-left: 1.2rem;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.info-list li {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+  color: #333;
+}
+
+.info-list.timeline li strong {
+  color: #2e7d32;
+}
+
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: #444;
+  margin: 0.5rem 0;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.legend-swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.swatch-good {
+  background: #2e7d32;
+}
+
+.swatch-bad {
+  background: #c62828;
+}
+
+.legend-marker {
+  width: 14px;
+  height: 0;
+  border-top: 2px dashed #444;
+  display: inline-block;
+}
+
+.chart-caption {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0.3rem 0 0.8rem;
+}
+
+.bar-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 190px;
+  overflow-x: auto;
+  padding-bottom: 0.2rem;
+}
+
+.bar-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  min-width: 14px;
+  height: 100%;
+}
+
+.bar-area {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.bar {
+  width: 100%;
+  min-height: 2px;
+  border-radius: 3px 3px 0 0;
+}
+
+.bar-good {
+  background: #2e7d32;
+}
+
+.bar-bad {
+  background: #c62828;
+}
+
+.bar-hour {
+  background: #2f5d8a;
+}
+
+.target-marker {
+  position: absolute;
+  left: 0;
+  right: 0;
+  border-top: 2px dashed #444;
+}
+
+.bar-label {
+  font-size: 0.65rem;
+  color: #777;
+  margin-top: 4px;
+}
+
+.my-status-card p {
+  line-height: 1.6;
+}
+
+.milestone-reached {
+  color: #2e7d32;
+}

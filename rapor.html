@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rapor - Adım Adım Bırak</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Adım Adım Bırak 🚭</h1>
+    <nav class="main-nav">
+      <a href="index.html">Ana Sayfa</a>
+      <a href="rapor.html" class="active">Rapor</a>
+      <a href="saglik.html">Sağlık Bilgisi</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="report-section" class="card">
+      <h2>Raporun</h2>
+
+      <p id="no-plan-message" class="hidden">Henüz bir planın yok. <a href="index.html">Ana sayfadan</a> planını oluşturunca burada raporunu görebilirsin.</p>
+
+      <div id="report-content" class="hidden">
+        <div class="price-setting">
+          <label for="price-input">Paket fiyatı (TL):</label>
+          <input type="number" id="price-input" min="0" step="0.01">
+          <button id="price-save" type="button">Güncelle</button>
+        </div>
+        <div id="reports" class="reports"></div>
+
+        <h3>Gün Gün Hedef / Gerçekleşen</h3>
+        <div class="chart-legend">
+          <span class="legend-item"><span class="legend-swatch swatch-good"></span> Hedefin altında</span>
+          <span class="legend-item"><span class="legend-swatch swatch-bad"></span> Hedefin üstünde</span>
+          <span class="legend-item"><span class="legend-marker"></span> Hedef çizgisi</span>
+        </div>
+        <div id="daily-chart" class="bar-chart"></div>
+
+        <h3>Saat Saat İçme Dağılımı</h3>
+        <p class="chart-caption">Tüm günler boyunca hangi saatlerde daha çok sigara içtiğini gösterir.</p>
+        <div id="hourly-chart" class="bar-chart hourly"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="plan.js"></script>
+  <script src="rapor.js"></script>
+</body>
+</html>

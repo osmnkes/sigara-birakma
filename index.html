@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adım Adım Bırak</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Adım Adım Bırak 🚭</h1>
+    <p class="subtitle">Sigarayı bir anda değil, kademeli olarak azaltarak bırak</p>
+    <nav class="main-nav">
+      <a href="index.html" class="active">Ana Sayfa</a>
+      <a href="rapor.html">Rapor</a>
+      <a href="saglik.html">Sağlık Bilgisi</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Henüz plan yoksa bu bölüm görünür -->
+    <section id="setup-section" class="card">
+      <h2>Planını Oluştur</h2>
+      <form id="setup-form">
+        <label for="start-count">Günde ortalama kaç sigara içiyorsun?</label>
+        <input type="number" id="start-count" min="1" required>
+
+        <label for="total-days">Kaç günde bırakmayı hedefliyorsun?</label>
+        <input type="number" id="total-days" min="1" required>
+
+        <label for="price-per-pack">Bir paket sigara kaç TL? (paket = 20 adet)</label>
+        <input type="number" id="price-per-pack" min="0" step="0.01" required>
+
+        <button type="submit">Planımı Oluştur</button>
+      </form>
+    </section>
+
+    <!-- Plan oluşturulunca bu bölüm görünür -->
+    <section id="dashboard-section" class="card hidden">
+      <h2 id="day-title">Gün</h2>
+
+      <!-- Bugünün hedefi henüz onaylanmadıysa bu görünür -->
+      <div id="target-picker" class="hidden">
+        <p class="suggestion-text">Planına göre önerilen hedef: <strong id="suggested-target">-</strong> sigara</p>
+        <form id="target-form">
+          <label for="chosen-target">Bugün için hedefin ne olsun?</label>
+          <input type="number" id="chosen-target" min="0" required>
+          <button type="submit">Hedefimi Onayla</button>
+        </form>
+      </div>
+
+      <!-- Bugünün hedefi onaylandıysa bu görünür -->
+      <div id="target-confirmed" class="hidden">
+        <div class="target-box">
+          <span class="target-label">Bugünkü hedefin</span>
+          <span id="today-target" class="target-number">-</span>
+          <span class="target-unit">sigara</span>
+        </div>
+
+        <div class="counter-box">
+          <span class="target-label">Bugün içtiğin</span>
+          <span id="today-count" class="counter-number">0</span>
+          <span class="target-unit">sigara</span>
+        </div>
+
+        <div class="tap-buttons">
+          <button id="add-cigarette" type="button">+1 İçtim</button>
+          <button id="undo-cigarette" type="button" class="undo">-1 Azalt</button>
+        </div>
+
+        <p id="feedback-message"></p>
+
+        <p id="today-times" class="times-list"></p>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <span id="stat-smokefree" class="stat-number">0</span>
+          <span class="stat-label">sigarasız gün</span>
+        </div>
+        <div class="stat">
+          <span id="stat-progress" class="stat-number">0%</span>
+          <span class="stat-label">plana uyum</span>
+        </div>
+      </div>
+
+      <h3>Geçmiş</h3>
+      <table id="history-table">
+        <thead>
+          <tr><th>Gün</th><th>Hedef</th><th>Gerçekleşen</th></tr>
+        </thead>
+        <tbody id="history-body"></tbody>
+      </table>
+
+      <button id="reset-button" class="secondary">Planı Sıfırla</button>
+    </section>
+
+  </main>
+
+  <script src="plan.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

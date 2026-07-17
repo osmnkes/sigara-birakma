@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sağlık Bilgisi - Adım Adım Bırak</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Adım Adım Bırak 🚭</h1>
+    <nav class="main-nav">
+      <a href="index.html">Ana Sayfa</a>
+      <a href="rapor.html">Rapor</a>
+      <a href="saglik.html" class="active">Sağlık Bilgisi</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="health-info" class="card">
+      <h2>Sigaranın Zararları</h2>
+      <ul class="info-list">
+        <li>Sigara dumanında 7000'den fazla kimyasal madde bulunur, bunlardan en az 70'i kanserojendir.</li>
+        <li>Akciğer kanseri, KOAH, kalp krizi ve inme riskini büyük ölçüde artırır.</li>
+        <li>Sadece içeni değil, çevresindeki insanları da (pasif içicilik) etkiler.</li>
+        <li>Cilt yaşlanmasını hızlandırır, tat ve koku duyusunu zayıflatır.</li>
+      </ul>
+
+      <h3>Bırakınca Vücudunda Neler Olur?</h3>
+      <p id="streak-info" class="chart-caption"></p>
+      <ul class="info-list timeline" id="milestone-list"></ul>
+    </section>
+
+    <p id="no-plan-health" class="hidden">Sigara kaydı girmeye başlayınca burada kendi ilerlemeni (ne kadar sigarasız kaldığını) görebilirsin. <a href="index.html">Ana sayfaya git</a>.</p>
+  </main>
+
+  <script src="plan.js"></script>
+  <script src="saglik.js"></script>
+</body>
+</html>
