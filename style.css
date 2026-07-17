@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: system-ui, sans-serif;
   background: #f4f6f8;
@@ -27,8 +32,9 @@ header h1 {
 .main-nav {
   margin-top: 1rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 0.6rem 1.2rem;
 }
 
 .main-nav a {
