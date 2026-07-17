@@ -90,11 +90,6 @@ function render() {
       feedback.textContent = `Hedefini aştın (${todayCount}/${target}), yarın tekrar dene.`;
       feedback.style.color = '#c62828';
     }
-
-    const times = plan.cigaretteTimes[today] || [];
-    document.getElementById('today-times').textContent = times.length
-      ? `Bugünkü saatler: ${times.join(', ')}`
-      : '';
   }
 
   renderStats(plan);
