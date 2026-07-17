@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Günler - Adım Adım Bırak</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Adım Adım Bırak 🚭</h1>
+    <nav class="main-nav">
+      <a href="index.html">Ana Sayfa</a>
+      <a href="gunler.html" class="active">Günler</a>
+      <a href="rapor.html">Rapor</a>
+      <a href="saglik.html">Sağlık Bilgisi</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="days-section" class="card">
+      <h2>Günlerin</h2>
+
+      <p id="no-plan-days" class="hidden">Henüz bir planın yok. <a href="index.html">Ana sayfadan</a> planını oluşturunca günlerin burada listelenecek.</p>
+      <p id="no-days-yet" class="hidden">Henüz kaydın yok. İlk gününü kaydettiğinde burada göreceksin.</p>
+
+      <div id="day-list" class="day-list"></div>
+    </section>
+  </main>
+
+  <script src="plan.js"></script>
+  <script src="gunler.js"></script>
+</body>
+</html>
