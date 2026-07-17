@@ -384,3 +384,57 @@ th, td {
 .milestone-reached {
   color: #2e7d32;
 }
+
+.day-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.day-card {
+  background: #f4f6f8;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.day-card p {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.day-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.day-card-title {
+  font-weight: bold;
+}
+
+.day-card-date {
+  font-weight: normal;
+  color: #777;
+  font-size: 0.85rem;
+}
+
+.day-card-status {
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+}
+
+.status-good {
+  background: #eaf5ea;
+  color: #2e7d32;
+}
+
+.status-bad {
+  background: #fdeaea;
+  color: #c62828;
+}
