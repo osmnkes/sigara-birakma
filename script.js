@@ -98,7 +98,6 @@ function render() {
   }
 
   renderStats(plan);
-  renderHistory(plan);
 }
 
 function renderStats(plan) {
@@ -116,22 +115,6 @@ function renderStats(plan) {
 
   document.getElementById('stat-smokefree').textContent = smokeFreeDays;
   document.getElementById('stat-progress').textContent = `${progressPercent}%`;
-}
-
-function renderHistory(plan) {
-  const tbody = document.getElementById('history-body');
-  tbody.innerHTML = '';
-
-  const dates = Object.keys(plan.logs).sort();
-  dates.forEach(date => {
-    const dayNum = daysBetween(plan.startDate, date);
-    const dayTarget = effectiveTargetForDate(plan, date);
-    const actual = plan.logs[date];
-
-    const row = document.createElement('tr');
-    row.innerHTML = `<td>${dayNum + 1}</td><td>${dayTarget}</td><td>${actual}</td>`;
-    tbody.appendChild(row);
-  });
 }
 
 setupForm.addEventListener('submit', (e) => {
